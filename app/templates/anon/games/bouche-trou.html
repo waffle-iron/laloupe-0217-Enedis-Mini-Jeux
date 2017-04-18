@@ -1,3 +1,33 @@
 <div id="bouche-trou">
-    BOUCHE TROU
+    <div class="introduction">
+        <p>Pour entretenir in jardin, les adultes peuvent utiliser des appareils électriques comme une tondeuse ou un taille-haie...</p>
+        <p>Dans ces situations, nous allons voir que certaines mesures de sécurité s'imposent.</p>
+    </div>
+
+    <div class="instructions">
+        <h2>Le bouche trou</h2>
+        <div class="instructions">Complète ce texte à trous en utilisant les 4 mots suivants : </div>
+        <ul class="words">
+            <li ng-repeat="word in words"><span class="word" data-drag="true" jqyoui-draggable="{index: {{$index}}, animate:true}" data-jqyoui-options="{revert: 'invalid'}" ng-model="words">{{ word }}</span></li>
+        </ul>
+    </div>
+
+    <div class="fill-in-the-blank">
+            Il est très important de
+            <span ng-class="{'filled': holes[0] !== undefined}" class="hole" data-drop="true" jqyoui-droppable="{index: 0, onDrop: 'onDrop'}" ng-model="holes">
+                <span class="word" ng-show="holes[0] !== undefined">{{holes[0]}}</span>
+            </span>
+            un appareil
+            <span ng-class="{'filled': holes[1] !== undefined}" class="hole" data-drop="true" jqyoui-droppable="{index: 1, onDrop: 'onDrop'}" ng-model="holes">
+                <span class="word" ng-show="holes[1] !== undefined">{{holes[1]}}</span>
+            </span>
+            avant de le
+            <span ng-class="{'filled': holes[2] !== undefined}" class="hole" data-drop="true" jqyoui-droppable="{index: 2, onDrop: 'onDrop'}" ng-model="holes">
+                <span class="word" ng-show="holes[2] !== undefined">{{holes[2]}}</span>
+            </span>.
+            Si tes parents n'y pensent pas, ils risquent de se
+            <span ng-class="{'filled': holes[3] !== undefined}" class="hole" data-drop="true" jqyoui-droppable="{index: 3, onDrop: 'onDrop'}" ng-model="holes">
+                <span class="word" ng-show="holes[3] !== undefined">{{holes[3]}}</span>
+            </span>.
+    </div>
 </div>
