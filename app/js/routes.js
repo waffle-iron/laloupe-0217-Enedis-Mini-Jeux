@@ -21,6 +21,17 @@ angular.module('app')
                         controller: 'MainController'
                     }
                 }
+
+            })
+            .state('anon.charabia', {
+                url: '/games/charabia',
+                views: {
+                    'content@': {
+                        templateUrl: 'anon/games/charabia.html',
+                        controller: 'CharabiaController'
+                    }
+                }
+
             })
             .state('anon.login', {
                 url: '/login',
