@@ -1,4 +1,5 @@
-<div id="bouche-trou">
+<!-- TODO make better animation when dropping words -->
+<div class="bouche-trou">
     <div class="introduction">
         <p>Pour entretenir in jardin, les adultes peuvent utiliser des appareils électriques comme une tondeuse ou un taille-haie...</p>
         <p>Dans ces situations, nous allons voir que certaines mesures de sécurité s'imposent.</p>
@@ -14,20 +15,20 @@
 
     <div class="fill-in-the-blank">
             Il est très important de
-            <span ng-class="{'filled': holes[0] !== undefined}" class="hole" data-drop="true" jqyoui-droppable="{index: 0, onDrop: 'onDrop'}" ng-model="holes">
-                <span class="word" ng-show="holes[0] !== undefined">{{holes[0]}}</span>
+            <span class="hole" data-drop="true" jqyoui-droppable="{index: 0, onDrop: 'onDrop'}" ng-model="holes">
+                <span class="word" ng-if="holes[0] !== ''" data-drag="true" jqyoui-draggable="{index: 0, animate:true}" data-jqyoui-options="{revert: 'invalid'}" ng-model="holes">{{holes[0]}}</span>
             </span>
             un appareil
-            <span ng-class="{'filled': holes[1] !== undefined}" class="hole" data-drop="true" jqyoui-droppable="{index: 1, onDrop: 'onDrop'}" ng-model="holes">
-                <span class="word" ng-show="holes[1] !== undefined">{{holes[1]}}</span>
+            <span  class="hole" data-drop="true" jqyoui-droppable="{index: 1, onDrop: 'onDrop'}" ng-model="holes">
+                <span class="word" ng-if="holes[1] !== ''" data-drag="true" jqyoui-draggable="{index: 1, animate:true}" data-jqyoui-options="{revert: 'invalid'}" ng-model="holes">{{holes[1]}}</span>
             </span>
             avant de le
-            <span ng-class="{'filled': holes[2] !== undefined}" class="hole" data-drop="true" jqyoui-droppable="{index: 2, onDrop: 'onDrop'}" ng-model="holes">
-                <span class="word" ng-show="holes[2] !== undefined">{{holes[2]}}</span>
+            <span  class="hole" data-drop="true" jqyoui-droppable="{index: 2, onDrop: 'onDrop'}" ng-model="holes">
+                <span class="word" ng-if="holes[2] !== ''" data-drag="true" jqyoui-draggable="{index: 2, animate:true}" data-jqyoui-options="{revert: 'invalid'}" ng-model="holes">{{holes[2]}}</span>
             </span>.
             Si tes parents n'y pensent pas, ils risquent de se
-            <span ng-class="{'filled': holes[3] !== undefined}" class="hole" data-drop="true" jqyoui-droppable="{index: 3, onDrop: 'onDrop'}" ng-model="holes">
-                <span class="word" ng-show="holes[3] !== undefined">{{holes[3]}}</span>
+            <span class="hole" data-drop="true" jqyoui-droppable="{index: 3, onDrop: 'onDrop'}" ng-model="holes">
+                <span class="word" ng-if="holes[3] !== ''" data-drag="true" jqyoui-draggable="{index: 3, animate:true}" data-jqyoui-options="{revert: 'invalid'}" ng-model="holes">{{holes[3]}}</span>
             </span>.
     </div>
 </div>

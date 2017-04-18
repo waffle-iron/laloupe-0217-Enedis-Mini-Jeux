@@ -1,31 +1,31 @@
-.hole {
-    display: inline-block;
-    height: 1.5em;
-    min-width: 10em;
-    background-color: lightgrey;
-    text-align: center;
-    vertical-align: middle;
+.bouche-trou {
+    .words {
+        list-style-type: none;
+        padding-left: 0;
+        min-height: 20px;
+        margin: 20px 5px;
 
-    &.filled {
-        background-color: pink;
+        li {
+            display: inline-block;
+        }
     }
-}
 
-.word {
-    padding: 0 5px;
-    margin: 0 5px;
-    border: solid 1px green;
-}
-
-.words {
-    list-style-type: none;
-    padding-left: 0;
-    min-height: 20px;
-    margin: 10px 5px;
-
-    li {
+    .word {
+        padding: 0 5px;
+        border: solid 1px green;
         display: inline-block;
     }
 
+    .hole {
+        display: inline-block;
+        height: 1.5em;
+        min-width: 10em;
+        background-color: lightgrey;
+        text-align: center;
+        vertical-align: middle;
 
+        .word {
+            width: 100%;
+        }
+    }
 }
