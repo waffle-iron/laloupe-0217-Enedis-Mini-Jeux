@@ -39,7 +39,19 @@ angular.module('app')
                         controller: 'RegisterController'
                     }
                 }
+            })
+            .state('anon.vraiOuFaux', {
+                url: '/vrai_ou_faux',
+                views: {
+                    'content@': {
+                        templateUrl: 'anon/games/vrai_ou_faux.html',
+                        controller: 'VraiOuFauxController'
+                    }
+                }
             });
+
+
+
         $stateProvider
             .state('user', {
                 abstract: true,
