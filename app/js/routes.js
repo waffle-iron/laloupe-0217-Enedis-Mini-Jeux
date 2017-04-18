@@ -31,12 +31,22 @@ angular.module('app')
                     }
                 }
             })
-            .state('anon.register', {
-                url: '/register',
+            .state('anon.games', {
+                abstract: true,
+                url: '/games',
                 views: {
                     'content@': {
-                        templateUrl: 'anon/register.html',
-                        controller: 'RegisterController'
+                        templateUrl: 'anon/game.html',
+                        controller: 'GameController'
+                    }
+                }
+            })
+            .state('anon.games.boucheTrou', {
+                url: '/bouche-trou',
+                views: {
+                    'game': {
+                        templateUrl: 'anon/games/bouche-trou.html',
+                        controller: 'BoucheTrouController'
                     }
                 }
             });
