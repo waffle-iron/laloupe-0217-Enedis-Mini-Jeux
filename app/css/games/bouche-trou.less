@@ -1,3 +1,5 @@
+@import "../drag-and-drop.less";
+
 .bouche-trou {
     .words {
         list-style-type: none;
@@ -11,9 +13,12 @@
     }
 
     .word {
-        padding: 0 5px;
+        padding: 0px 5px;
+        margin: 0px 5px;
         border: solid 1px green;
         display: inline-block;
+        
+        .grabbable();
     }
 
     .hole {
@@ -26,6 +31,7 @@
 
         .word {
             width: 100%;
+            margin: 0px 0px;
         }
     }
 }

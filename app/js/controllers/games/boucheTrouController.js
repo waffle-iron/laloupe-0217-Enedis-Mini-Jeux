@@ -9,20 +9,35 @@ angular.module('app')
             'nettoyer',
             'blesser'
         ];
-        Object.freeze(WORDS); // rend constant WORDS
+        Object.freeze(WORDS); // rend constant WORDS, ce qui est utile pour éviter des bugs
 
-
-        $scope.words = WORDS.slice(0); // copie l'array
+        $scope.words = WORDS.slice(0); // copie l'array (puisque WORDS est constant);
         $scope.holes = WORDS.map( function() { return ""; }); // pour que words et holes soient bien de la même longueure
 
+        /*
+        * Est déclenchée lorsque des élements sont lachés au dessus des trous
+        */
         $scope.onDrop = function() {
-            console.log(checkSolution($scope.holes));
-            console.log('WORDS', WORDS, 'solution', $scope.holes);
+            var isRightAnswer = checkSolution($scope.holes);
+            if (isRightAnswer) {
+                endGame();
+            }
         };
 
+        /*
+        * Vérifie la solution
+        */
         function checkSolution(proposedSolution) {
             return proposedSolution.length === WORDS.length && proposedSolution.every( function(word, index) {
                 return word === WORDS[index];
             });
+        }
+
+        /*
+        * Gère ce qu'il faut faire lorsque le jeu se termine
+        */
+        function endGame() {
+            // TODO faire quelquechose de mieux
+            alert('Congrats');
         }
     });
