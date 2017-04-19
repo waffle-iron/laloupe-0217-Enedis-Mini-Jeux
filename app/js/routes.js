@@ -21,6 +21,7 @@ angular.module('app')
                         controller: 'MainController'
                     }
                 }
+
             })
             .state('anon.login', {
                 url: '/login',
@@ -40,6 +41,16 @@ angular.module('app')
                         controller: 'GameController'
                     }
                 },
+            })
+            .state('anon.games.charabia', {
+              url: '/charabia',
+              views: {
+                'game': {
+                  templateUrl: 'anon/games/charabia.html',
+                  controller: 'CharabiaController'
+                }
+              }
+
             })
             .state('anon.games.boucheTrou', {
                 url: '/bouche-trou',
