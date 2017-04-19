@@ -40,17 +40,15 @@ angular.module('app')
                     }
                 }
             })
-            .state('anon.vraiOuFaux', {
+            .state('anon.games.vraiOuFaux', {
                 url: '/vrai_ou_faux',
                 views: {
-                    'content@': {
+                    'game': {
                         templateUrl: 'anon/games/vrai_ou_faux.html',
                         controller: 'VraiOuFauxController'
                     }
                 }
             });
-
-
 
         $stateProvider
             .state('user', {
