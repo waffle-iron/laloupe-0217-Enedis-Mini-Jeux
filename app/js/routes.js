@@ -60,7 +60,18 @@ angular.module('app')
                         controller: 'BoucheTrouController'
                     }
                 },
-            });
+              })
+            .state('anon.games.vraiOuFaux', { 
+              url: '/vrai_ou_faux',
+              views: {
+                  'game': {
+                      templateUrl: 'anon/games/vrai_ou_faux.html',
+                      controller: 'VraiOuFauxController'
+                  }
+              }
+
+          });
+
         $stateProvider
             .state('user', {
                 abstract: true,
