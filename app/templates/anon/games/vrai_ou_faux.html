@@ -8,17 +8,17 @@
     <!-- Start Question -->
     <div class="row">
       <div class="col-xs-12 text-center vrai-ou-faux-question">
-        <p><span class="vrai-ou-faux-mot">QUESTION  :</span>{{question1}}</p>
+        <p><span class="vrai-ou-faux-mot">QUESTION  :</span>{{currentQuestion}}</p>
       </div>
     </div>
     <!-- End Question -->
 <!-- Start Bouton Vrai ou Faux -->
-    <div class="row vrai-ou-faux-bouton">
+    <div ng-hide="cacheBouton" class="row vrai-ou-faux-bouton">
       <div class="col-xs-offset-4 col-xs-2 text-center">
-        <button ng-click="faux()" type="button" class="btn">Vrai</button>
+        <button ng-click="vrai(reponseUtilisateur)" type="button" class="btn">Vrai</button>
       </div>
       <div class="col-xs-2 text-center">
-        <button ng-click="faux()" type="button" class="faux">Faux</button>
+        <button ng-click="faux(reponseUtilisateur)" type="button" class="faux">Faux</button>
       </div>
     </div>
     <!-- End Bouton Vrai ou Faux -->
