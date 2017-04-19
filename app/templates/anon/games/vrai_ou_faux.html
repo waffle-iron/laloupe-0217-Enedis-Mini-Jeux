@@ -7,34 +7,18 @@
     </div>
     <!-- Start Question -->
     <div class="row">
-      <div ng-hide="question1" class="col-xs-12 text-center vrai-ou-faux-question">
-        <p><span class="vrai-ou-faux-mot">QUESTION 1 :</span>Aucun risque de s'électrocuter si l'on utilise un sèche-cheveux avec les mains mouillées</p>
-      </div>
-      <div ng-hide="question2" class="col-xs-12 text-center vrai-ou-faux-question">
-        <p><span class="vrai-ou-faux-mot">QUESTION 2 :</span>
-          Si je touche un lave-linge qui grésille ou qui picote le bout de mes doitgs, je préviens tout de suite mes parents</p>
-      </div>
-      <div ng-hide="question3" class="col-xs-12 text-center vrai-ou-faux-question">
-        <p><span class="vrai-ou-faux-mot">QUESTION 3 :</span>
-          Il n'est pas dangereux de se servir d'un appareil électrique dans l'eau</p>
-      </div>
-      <div ng-hide="question4" class="col-xs-12 text-center vrai-ou-faux-question">
-        <p><span class="vrai-ou-faux-mot">QUESTION 4 :</span>
-        Pour fiare sécher sa serviette plus vite, on peut la poser sur le radiateur électrique, meme si ce n'est pas un s</p>
-      </div>
-      <div ng-hide="question5" class="col-xs-12 text-center vrai-ou-faux-question">
-        <p><span class="vrai-ou-faux-mot">QUESTION 5 :</span>
-          Aucun risque de s'électrocuter si l'on utilise un sèche-cheveux avec les mains mouillées</p>
+      <div class="col-xs-12 text-center vrai-ou-faux-question">
+        <p><span class="vrai-ou-faux-mot">QUESTION  :</span>{{question1}}</p>
       </div>
     </div>
     <!-- End Question -->
 <!-- Start Bouton Vrai ou Faux -->
     <div class="row vrai-ou-faux-bouton">
       <div class="col-xs-offset-4 col-xs-2 text-center">
-        <button type="button" class="btn">Vrai</button>
+        <button ng-click="faux()" type="button" class="btn">Vrai</button>
       </div>
       <div class="col-xs-2 text-center">
-        <button type="button" class="faux">Faux</button>
+        <button ng-click="faux()" type="button" class="faux">Faux</button>
       </div>
     </div>
     <!-- End Bouton Vrai ou Faux -->
