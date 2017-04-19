@@ -1,0 +1,37 @@
+@import "../drag-and-drop.less";
+
+.bouche-trou {
+    .words {
+        list-style-type: none;
+        padding-left: 0;
+        min-height: 20px;
+        margin: 20px 5px;
+
+        li {
+            display: inline-block;
+        }
+    }
+
+    .word {
+        padding: 0px 5px;
+        margin: 0px 5px;
+        border: solid 1px green;
+        display: inline-block;
+        
+        .grabbable();
+    }
+
+    .hole {
+        display: inline-block;
+        height: 1.5em;
+        min-width: 10em;
+        background-color: lightgrey;
+        text-align: center;
+        vertical-align: middle;
+
+        .word {
+            width: 100%;
+            margin: 0px 0px;
+        }
+    }
+}
