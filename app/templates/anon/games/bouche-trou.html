@@ -9,26 +9,26 @@
         <h2>Le bouche trou</h2>
         <div class="instructions">Complète ce texte à trous en utilisant les 4 mots suivants : </div>
         <ul class="words">
-            <li ng-repeat="word in words"><span class="word" data-drag="true" jqyoui-draggable="{index: {{$index}}, animate:true}" data-jqyoui-options="{revert: 'invalid'}" ng-model="words">{{ word }}</span></li>
+            <li ng-repeat="word in words"><span class="word" data-drag="true" jqyoui-draggable="{index: {{$index}}, animate:true}" data-jqyoui-options="{revert: 'invalid', placeholder: true, opacity: 0.5}" ng-model="words">{{ word }}</span></li>
         </ul>
     </div>
 
     <div class="fill-in-the-blank">
             Il est très important de
             <span class="hole" data-drop="true" jqyoui-droppable="{index: 0, onDrop: 'onDrop'}" ng-model="holes">
-                <span class="word" ng-if="holes[0] !== ''" data-drag="true" jqyoui-draggable="{index: 0, animate:true}" data-jqyoui-options="{revert: 'invalid'}" ng-model="holes">{{holes[0]}}</span>
+                <span class="word" ng-if="holes[0] !== ''" data-drag="true" jqyoui-draggable="{index: 0, animate:true}" data-jqyoui-options="{revert: 'invalid', direction: 'top'}" ng-model="holes">{{holes[0]}}</span>
             </span>
             un appareil
             <span  class="hole" data-drop="true" jqyoui-droppable="{index: 1, onDrop: 'onDrop'}" ng-model="holes">
-                <span class="word" ng-if="holes[1] !== ''" data-drag="true" jqyoui-draggable="{index: 1, animate:true}" data-jqyoui-options="{revert: 'invalid'}" ng-model="holes">{{holes[1]}}</span>
+                <span class="word" ng-if="holes[1] !== ''" data-drag="true" jqyoui-draggable="{index: 1, animate:true}" data-jqyoui-options="{revert: 'invalid', direction: 'top'}" ng-model="holes">{{holes[1]}}</span>
             </span>
             avant de le
             <span  class="hole" data-drop="true" jqyoui-droppable="{index: 2, onDrop: 'onDrop'}" ng-model="holes">
-                <span class="word" ng-if="holes[2] !== ''" data-drag="true" jqyoui-draggable="{index: 2, animate:true}" data-jqyoui-options="{revert: 'invalid'}" ng-model="holes">{{holes[2]}}</span>
+                <span class="word" ng-if="holes[2] !== ''" data-drag="true" jqyoui-draggable="{index: 2, animate:true}" data-jqyoui-options="{revert: 'invalid', direction: 'top'}" ng-model="holes">{{holes[2]}}</span>
             </span>.
             Si tes parents n'y pensent pas, ils risquent de se
             <span class="hole" data-drop="true" jqyoui-droppable="{index: 3, onDrop: 'onDrop'}" ng-model="holes">
-                <span class="word" ng-if="holes[3] !== ''" data-drag="true" jqyoui-draggable="{index: 3, animate:true}" data-jqyoui-options="{revert: 'invalid'}" ng-model="holes">{{holes[3]}}</span>
+                <span class="word" ng-if="holes[3] !== ''" data-drag="true" jqyoui-draggable="{index: 3, animate:true}" data-jqyoui-options="{revert: 'invalid', direction: 'top'}" ng-model="holes">{{holes[3]}}</span>
             </span>.
     </div>
 </div>

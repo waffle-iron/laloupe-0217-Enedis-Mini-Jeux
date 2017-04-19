@@ -1,5 +1,5 @@
 angular.module('app')
-    .controller('BoucheTrouController', function($scope) {
+    .controller('BoucheTrouController', function($scope, $timeout) {
         /*
         * La solution (les mots sont dans le bonne ordre)
         */
@@ -13,16 +13,6 @@ angular.module('app')
 
         $scope.words = WORDS.slice(0); // copie l'array (puisque WORDS est constant);
         $scope.holes = WORDS.map( function() { return ""; }); // pour que words et holes soient bien de la même longueure
-
-        /*
-        * Est déclenchée lorsque des élements sont lachés au dessus des trous
-        */
-        $scope.onDrop = function() {
-            var isRightAnswer = checkSolution($scope.holes);
-            if (isRightAnswer) {
-                endGame();
-            }
-        };
 
         /*
         * Vérifie la solution
@@ -40,4 +30,18 @@ angular.module('app')
             // TODO faire quelquechose de mieux
             alert('Congrats');
         }
+
+        /*
+        * Est déclenchée lorsque des élements sont lachés au dessus des trous
+        */
+        $scope.onDrop = function() {
+            $timeout(function() { // sinon l'animation de déplacement se fait après l'affichage du message
+                var isRightAnswer = checkSolution($scope.holes);
+                if (isRightAnswer) {
+                    endGame();
+                }
+            }, 200);
+        };
+
+
     });
