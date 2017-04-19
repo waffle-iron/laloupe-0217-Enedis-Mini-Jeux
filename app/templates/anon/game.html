@@ -1,4 +1,16 @@
-<h2>Page de jeu</h2>
+<div class="game">
+    <h2>Page de jeu</h2>
 
-<div class="game-container" ui-view='game'>
+    <div class="game-container" ui-view="game">
+    </div>
+
+    <!-- TODO insérer les personnages en svg -->
+    <!-- TODO rendre les bulles propres -->
+    <div class="bulles container">
+        <div class="col-xs-6" ng-repeat="(character, popup) in popups">
+            <div class="{{ character.toLowerCase() }} bulle" ng-show="popup.show">
+                <div class="content">{{ popup.content }}</div>
+            </div>
+        </div>
+    </div>
 </div>

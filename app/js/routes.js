@@ -39,7 +39,7 @@ angular.module('app')
                         templateUrl: 'anon/game.html',
                         controller: 'GameController'
                     }
-                }
+                },
             })
             .state('anon.games.boucheTrou', {
                 url: '/bouche-trou',
@@ -48,7 +48,7 @@ angular.module('app')
                         templateUrl: 'anon/games/bouche-trou.html',
                         controller: 'BoucheTrouController'
                     }
-                }
+                },
             });
         $stateProvider
             .state('user', {
