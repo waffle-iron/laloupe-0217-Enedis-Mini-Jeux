@@ -1,19 +1,77 @@
+// Dimensions
+@lea-height: 398px;
+@lea-width: 158px;
+@greg-height: 273px;
+@greg-width: 160px;
+@bulle-min-height: 100px;
+@bulle-min-width: @bulle-min-height;
+@bulle-offset: 50px;
+
 .game {
-    .bulle {
-        color: @white;
-        background-image: url("img/bulledialogue.svg");
+    .bulle-container {
+        position: relative;
 
-        &.lea {
-            background-color: @red;
+        .bulle {
+            color: @white;
+            position: absolute;
+            min-height: @bulle-min-height;
+            min-width: @bulle-min-width;
+            z-index: 100;
+
+            .content {
+                position: absolute;
+                top: 10%;
+                left: 13%;
+                height: 60%;
+                width: 75%;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+
+                div {
+                    text-align: center;
+                    width: 100%;
+                }
+            }
+
+            &.lea {
+                top: 0;
+                right: @lea-width - @bulle-offset;
+            }
+
+            &.greg {
+                top: @lea-height - @greg-height;
+                left: @greg-width - @bulle-offset;
+            }
         }
 
-        &.greg {
-            background-color: @green;
-        }
+        polygon {
+            &.lea {
+                fill: #ed1157;
+            }
 
-        .content {
-            width: 80%;
-            margin: 0 auto;
+            &.greg {
+                fill: #00B4AE;
+            }
+        }
+    }
+
+    .characters {
+        position: relative;
+        min-height: @lea-height + @bulle-min-height / 2;
+
+        .character {
+            z-index: 10;
+            position: absolute;
+            bottom: 0;
+
+            &.lea {
+                right: 0;
+            }
+
+            &.greg {
+                left: 0;
+            }
         }
     }
 }
