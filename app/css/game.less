@@ -1,19 +1,80 @@
 .game {
-    .bulle {
-        color: @white;
-        background-image: url("img/bulledialogue.svg");
+    @lea-height: 398px;
+    @lea-width: 158px;
+    @greg-height: 273px;
+    @greg-width: 160px;
+    @bulle-min-height: 100px;
+    @bulle-min-width: @bulle-min-height;
+    @bulle-offset: 50px;
 
+
+    .bulle-container {
+        position: relative;
+
+        .bulle {
+            color: @white;
+            background-size: contain;
+            position: relative;
+            min-height: @bulle-min-height;
+            min-width: @bulle-min-width;
+            z-index: 100;
+
+            .content {
+                position: absolute;
+                top: 10%;
+                left: 13%;
+                height: 60%;
+                width: 75%;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+
+                div {
+                    text-align: center;
+                    width: 100%;
+                }
+            }
+
+            &.lea {
+                position: absolute;
+                top: 0;
+                right: @lea-width - @bulle-offset;
+            }
+
+            &.greg {
+                position: absolute;
+                top: @lea-height - @greg-height;
+                left: @greg-width - @bulle-offset;
+            }
+        }
+    }
+
+    .characters {
+        position: relative;
+        min-height: @lea-height + @bulle-min-height / 2;
+
+        .character {
+            z-index: 10;
+            position: absolute;
+            bottom: 0;
+
+            &.lea {
+                right: 0;
+            }
+
+            &.greg {
+                left: 0;
+            }
+        }
+    }
+
+    polygon {
         &.lea {
-            background-color: @red;
+            fill: #ed1157;
         }
 
         &.greg {
-            background-color: @green;
-        }
-
-        .content {
-            width: 80%;
-            margin: 0 auto;
+            fill: #00B4AE;
         }
     }
 }

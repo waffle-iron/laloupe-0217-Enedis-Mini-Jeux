@@ -29,34 +29,28 @@ angular.module('app')
          * Gère ce qu'il faut faire lorsque le jeu se termine
          */
         function endGame() {
-            var popups = {
-                'Greg': {
-                    content: 'Bien joué !',
-                    show: true
-                },
-                'Lea': {
-                    content: '',
-                    show: false
-                }
+            var bulle = {
+                character: 'Greg',
+                content: 'Bien joué !',
+                show: true
             };
-            $scope.$emit('popups', popups);
+            $scope.$emit('bulle', bulle);
         }
 
         /*
          * Gère ce qu'il faut faire en cas d'échec
          */
         function tryAgain() {
-            var allFilled = $scope.holes.every( function (hole) {
+            var allFilled = $scope.holes.every(function(hole) {
                 return hole !== '';
             });
             if (allFilled) {
-                var popups = {
-                    'Lea': {
-                        show: true,
-                        content: "Essaye encore !"
-                    }
+                var bulle = {
+                    character: 'Lea',
+                    show: true,
+                    content: "Essaye encore !"
                 };
-                $scope.$emit('popups', popups);
+                $scope.$emit('bulle', bulle);
             }
         }
 
