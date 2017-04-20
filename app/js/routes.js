@@ -70,6 +70,15 @@ angular.module('app')
                       }
                   },
                 })
+                .state('anon.games.miniQuiz', {
+                    url: '/miniQuiz',
+                    views: {
+                        'game': {
+                            templateUrl: 'anon/games/miniQuiz.html',
+                            controller: 'miniQuizController'
+                        }
+                    },
+                  })
             .state('anon.games.vraiOuFaux', {
               url: '/vrai_ou_faux',
               views: {
