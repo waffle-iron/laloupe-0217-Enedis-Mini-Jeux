@@ -61,7 +61,16 @@ angular.module('app')
                     }
                 },
               })
-            .state('anon.games.vraiOuFaux', { 
+              .state('anon.games.miroir', {
+                  url: '/miroir',
+                  views: {
+                      'game': {
+                          templateUrl: 'anon/games/miroir.html',
+                          controller: 'miroirController'
+                      }
+                  },
+                })
+            .state('anon.games.vraiOuFaux', {
               url: '/vrai_ou_faux',
               views: {
                   'game': {
