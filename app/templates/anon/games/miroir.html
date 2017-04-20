@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 text-center">
+            <h1>La Tête à l'Envers</h1>
+            <p>Regarde cette phrases, elle est écrite à l'envers. Pour la déchiffrer remets les mots et les lettres dans le bon ordre.</p>
+        </div>
+    </div>
+    <div class="row miroir-jeu">
+        <div class= "col-xs-9 miroir-charabia text-center">
+            <p class="miroir-text-charabia">SEUQUIRCELÉ SENGIL SAP EHCORPPAT EN TUOTRUS, TROPS LE TIOS EUQ LEUQ</p>
+        </div>
+        <div class="col-xs-3">
+            <img class="miroir-agent-enedis img-responsive" src="img/games/miroir/agent10.svg" alt="Un agent ENEDIS">
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <form ng-submit="compare()" method="post" class="text-center">
+          <textarea ng-model="reponse" class="miroir-textarea" rows="2" cols="80" placeholder="Écrit ta réponse Ici !"></textarea>
+          <button type="submit">valide ta réponse</button>
+        </form>
+      </div>
+    </div>
+</div>

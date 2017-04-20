@@ -66,7 +66,7 @@ angular.module('app')
                   views: {
                       'game': {
                           templateUrl: 'anon/games/miroir.html',
-                          controller: 'mirroirController'
+                          controller: 'miroirController'
                       }
                   },
                 })
