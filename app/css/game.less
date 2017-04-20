@@ -1,20 +1,19 @@
+// Dimensions
+@lea-height: 398px;
+@lea-width: 158px;
+@greg-height: 273px;
+@greg-width: 160px;
+@bulle-min-height: 100px;
+@bulle-min-width: @bulle-min-height;
+@bulle-offset: 50px;
+
 .game {
-    @lea-height: 398px;
-    @lea-width: 158px;
-    @greg-height: 273px;
-    @greg-width: 160px;
-    @bulle-min-height: 100px;
-    @bulle-min-width: @bulle-min-height;
-    @bulle-offset: 50px;
-
-
     .bulle-container {
         position: relative;
 
         .bulle {
             color: @white;
-            background-size: contain;
-            position: relative;
+            position: absolute;
             min-height: @bulle-min-height;
             min-width: @bulle-min-width;
             z-index: 100;
@@ -36,15 +35,23 @@
             }
 
             &.lea {
-                position: absolute;
                 top: 0;
                 right: @lea-width - @bulle-offset;
             }
 
             &.greg {
-                position: absolute;
                 top: @lea-height - @greg-height;
                 left: @greg-width - @bulle-offset;
+            }
+        }
+
+        polygon {
+            &.lea {
+                fill: #ed1157;
+            }
+
+            &.greg {
+                fill: #00B4AE;
             }
         }
     }
@@ -65,16 +72,6 @@
             &.greg {
                 left: 0;
             }
-        }
-    }
-
-    polygon {
-        &.lea {
-            fill: #ed1157;
-        }
-
-        &.greg {
-            fill: #00B4AE;
         }
     }
 }
