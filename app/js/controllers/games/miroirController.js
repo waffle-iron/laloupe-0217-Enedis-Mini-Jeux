@@ -7,7 +7,8 @@ angular.module('app')
             $scope.solution3 = 'quelque soit le sport surtout ne t\' approche pas des lignes electriques';
             $scope.reponse = '';
             $scope.compare = function () {
-              if ($scope.reponse.toLowerCase().trim() === $scope.solution || $scope.solution1 || $scope.solution2 || $scope.solution3) {
+              var bonneReponse = $scope.reponse.toLowerCase().trim();
+              if (bonneReponse === $scope.solution ||bonneReponse === $scope.solution1 ||bonneReponse === $scope.solution2 ||bonneReponse === $scope.solution3) {
                 console.log('Bravo!');
               } else {
                 console.log("Essaye Encore !!");
