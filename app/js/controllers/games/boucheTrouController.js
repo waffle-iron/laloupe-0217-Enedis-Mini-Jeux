@@ -31,7 +31,7 @@ angular.module('app')
         function endGame() {
             var bulle = {
                 character: 'Greg',
-                content: 'Bien joué !fffffffffffffffffffffffffffffffffff',
+                content: 'Bien joué !',
                 show: true
             };
             $scope.$emit('bulle', bulle);
