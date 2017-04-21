@@ -1,1 +1,2 @@
+[![Stories in Ready](https://badge.waffle.io/WildCodeSchool/laloupe-0217-Enedis-Mini-Jeux.png?label=ready&title=Ready)](https://waffle.io/WildCodeSchool/laloupe-0217-Enedis-Mini-Jeux)
 # laloupe-0217-Enedis-Mini-Jeux
