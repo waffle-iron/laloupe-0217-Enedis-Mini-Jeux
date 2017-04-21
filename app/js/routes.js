@@ -21,6 +21,7 @@ angular.module('app')
                         controller: 'MainController'
                     }
                 }
+
             })
             .state('anon.login', {
                 url: '/login',
@@ -31,15 +32,64 @@ angular.module('app')
                     }
                 }
             })
-            .state('anon.register', {
-                url: '/register',
+            .state('anon.games', {
+                abstract: true,
+                url: '/games',
                 views: {
                     'content@': {
-                        templateUrl: 'anon/register.html',
-                        controller: 'RegisterController'
+                        templateUrl: 'anon/game.html',
+                        controller: 'GameController'
                     }
+                },
+            })
+            .state('anon.games.charabia', {
+              url: '/charabia',
+              views: {
+                'game': {
+                  templateUrl: 'anon/games/charabia.html',
+                  controller: 'CharabiaController'
                 }
-            });
+              }
+
+            })
+            .state('anon.games.boucheTrou', {
+                url: '/bouche-trou',
+                views: {
+                    'game': {
+                        templateUrl: 'anon/games/bouche-trou.html',
+                        controller: 'BoucheTrouController'
+                    }
+                },
+              })
+              .state('anon.games.miroir', {
+                  url: '/miroir',
+                  views: {
+                      'game': {
+                          templateUrl: 'anon/games/miroir.html',
+                          controller: 'miroirController'
+                      }
+                  },
+                })
+                .state('anon.games.miniQuiz', {
+                    url: '/miniQuiz',
+                    views: {
+                        'game': {
+                            templateUrl: 'anon/games/miniQuiz.html',
+                            controller: 'miniQuizController'
+                        }
+                    },
+                  })
+            .state('anon.games.vraiOuFaux', {
+              url: '/vrai_ou_faux',
+              views: {
+                  'game': {
+                      templateUrl: 'anon/games/vrai_ou_faux.html',
+                      controller: 'VraiOuFauxController'
+                  }
+              }
+
+          });
+
         $stateProvider
             .state('user', {
                 abstract: true,

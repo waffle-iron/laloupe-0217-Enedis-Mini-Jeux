@@ -1,0 +1,26 @@
+/*
+* Mixin pour le cursor des éléments draggable
+*/
+.grabbable {
+    cursor: -webkit-grab;
+    cursor:-moz-grab;
+    cursor: grab;
+
+    &:active {
+        cursor: -webkit-grabbing;
+        cursor:-moz-grabbing;
+        cursor: grabbing;
+    }
+}
+
+/*
+* Classe utilisée pour retourner par rapport à un axe vertical une imgae, un svg
+*/
+.flip-horizontal {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}

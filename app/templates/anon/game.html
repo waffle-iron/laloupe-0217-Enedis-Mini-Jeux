@@ -1,0 +1,15 @@
+<div class="game container">
+    <!-- TODO faire un titre custom par page-->
+    <h2></h2>
+
+    <div class="game-container row" ui-view="game">
+    </div>
+
+    <!-- TODO insérer les personnages en svg -->
+    <!-- TODO rendre les bulles propres -->
+    <div class="bulle-container characters row">
+        <img class="character greg flip-horizontal" src="/img/greg.png">
+        <speech-bubble  ng-show="bulle.show" character="bulle.character.toLowerCase()" content="bulle.content" flip="bulle.character === 'Greg'"></speech-bubble>
+        <img class="character lea" src="/img/lea.png">
+    </div>
+</div>
